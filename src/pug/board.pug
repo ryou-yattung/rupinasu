@@ -1,0 +1,202 @@
+doctype html
+html(lang='ja')
+  head
+    include _head.pug
+    link(rel="stylesheet" href="css/board.css")
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+
+    title るぴなす-掲示板
+    
+  body
+    include _header.pug
+    main
+      .title
+        h2 るぴなすけいじばん
+      .serach 
+        input(type="text" placeholder="自分と似た悩みを検索する")
+        span.search_left 
+        span.search_right
+      .tagWrap 
+        .tag 
+        
+          p 解決済みの相談
+          img(src="img/solved.svg", alt="")
+        
+        .tag 
+          p まだ未解決の相談
+        
+      //- コンテンツ6こ
+      .postList
+        .postWrap
+          .dateWrap   
+              p.dateWrap_bday 2022.7.17 
+              p.dateWrap_tag 妊娠
+              p.dateWrap_tag 未成年
+              p.dateWrap_com コメント数2
+          .profFlex  
+            .profWrap
+              img(src="img/icon1.svg")
+              p みーちゃん
+              p 18歳
+          section
+            a(href="") 
+              h3 彼氏の子を授かりました。
+            p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+          .solved 
+            img(src="img/solved.svg", alt="")
+        .postWrap
+          .dateWrap   
+              p.dateWrap_bday 2022.7.17 
+              p.dateWrap_tag 妊娠
+              p.dateWrap_tag 母子家庭
+              p.dateWrap_com コメント数2
+          .profFlex
+            .profWrap
+              img(src="img/icon2.svg")
+              p かなこ
+              p 18歳
+          section
+            h3 彼氏の子を授かりました。
+            p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+          .solved 
+            img(src="img/solved.svg", alt="")
+        .postWrap
+          .dateWrap   
+              p.dateWrap_bday 2022.7.17 
+              p.dateWrap_tag 妊娠
+              p.dateWrap_tag 母子家庭
+              p.dateWrap_com コメント数2
+          .profFlex
+            .profWrap
+              img(src="img/icon2.svg")
+              p かなこ
+              p 18歳
+          section
+            h3 彼氏の子を授かりました。
+            p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+          .solved 
+            img(src="img/solved.svg", alt="")
+        .postWrap
+          .dateWrap   
+              p.dateWrap_bday 2022.7.17 
+              p.dateWrap_tag 妊娠
+              p.dateWrap_tag 母子家庭
+              p.dateWrap_com コメント数2
+          .profFlex
+            .profWrap
+              img(src="img/icon2.svg")
+              p かなこ
+              p 18歳
+          section
+            h3 彼氏の子を授かりました。
+            p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+          .solved 
+            img(src="img/solved.svg", alt="")
+        .postWrap
+          .dateWrap   
+              p.dateWrap_bday 2022.7.17 
+              p.dateWrap_tag 妊娠
+              p.dateWrap_tag 母子家庭
+              p.dateWrap_com コメント数2
+          .profFlex
+            .profWrap
+              img(src="img/icon2.svg")
+              p かなこ
+              p 18歳
+          section
+            h3 彼氏の子を授かりました。
+            p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+          .solved 
+            img(src="img/solved.svg", alt="")
+        .postWrap
+          .dateWrap   
+              p.dateWrap_bday 2022.7.17 
+              p.dateWrap_tag 妊娠
+              p.dateWrap_tag 母子家庭
+              p.dateWrap_com コメント数2
+          .profFlex
+            .profWrap
+              img(src="img/icon2.svg")
+              p かなこ
+              p 18歳
+          section
+            h3 彼氏の子を授かりました。
+            p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+          .solved 
+            img(src="img/solved.svg", alt="")
+        //- コンテンツ終わり
+
+      .pageBtn
+        p 
+          a(href="#")  &lt;
+        p 
+          a(href="#")  1
+        p 
+          a(href="#")  2
+        p 
+          a(href="#")  3
+        p 
+          a(href="#")  4
+        p 
+          a(href="#")  5
+        p 
+          a(href="#")  6
+        p 
+          a(href="#")  &gt;
+
+      .bannerWrap 
+        .postBtn 
+          a(href="") 悩みを相談する
+        .banner1 
+          a(href="#")
+            img(src="img/column_banner.svg", alt="") 
+        .banner2
+          a(href="#")
+            img(src="img/app_banner.svg", alt="") 
+        //- .doctorBtn 
+        //-   a(href="#")
+        //-     |医者に
+        //-     br
+        //-     |相談する 
+
+        //-タグ
+        .postTag
+          h4 タグから探す
+            .postTag_flex   
+              ul 
+                li 妊娠
+                li 母子家庭
+                li 出産
+                li 堕胎
+                li 妊娠
+                li 母子家庭
+                li 出産
+                li 堕胎
+                li 妊娠
+                li 母子家庭
+                li つわり
+                li ピル
+                li 生理
+                li 生理
+                li つわり
+                li ピル
+                li つわり
+                li 妊娠
+                li つわり
+                li ピル
+          //-個別相談
+          .postDoctor
+            img(src="img/post_doctor.png", alt="")
+            h4 医師に個別で相談する
+              span.tri_right
+                img(src="img/doctor_dropright.png", alt="")
+            p 
+             |掲示板がハードルが高い方は
+             br
+             |医師と個別でお話できます。
+
+
+    include _footer.pug
+
+    //- script(src="js/board.js") 
+    

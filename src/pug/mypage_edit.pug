@@ -1,0 +1,46 @@
+doctype html
+html(lang="ja")
+     head
+          include _head.pug
+          link(rel="stylesheet" href="css/mypage_edit.css")
+          title プロフィール編集 
+     body 
+          include _header.pug
+          main 
+               h2 マイページ
+
+               .profileBg
+                    .iconWrap 
+                         label 
+                              img(src="", alt="" class="icon_img")  
+                              input(type="file" name="file" class="img_font") 
+                         p プロフィール写真を変更         
+                    .profileWrap 
+                         form(action="", method="") 
+                              .name.form_left    
+                                   label(for="") 名前
+                                   input(type="text" placeholder ="みーちゃん")
+                              .age.form_left  
+                                   label(for="") 年齢
+                                   input(type="text" placeholder ="18" maxlength="2")
+                              .gender.form_left  
+                                   label 性別
+                                   .gender_input
+                                        input(type="radio" name="drone") 
+                                        label(for="" class="radio01") 男性
+                                   .gender_input
+                                        input(type="radio" name="drone" class="gender_border")
+                                        label(for="" class="radio01") 女性
+                              .introWrap
+                                   label.form_left(for="") 自己紹介   
+                                   //- input(type="text" placeholder="初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。")
+                                   <textarea name="sampleName" placeholder="初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。"></textarea>
+                              .btnWrap 
+                                   .cancel.btn
+                                        input(type="reset" value="キャンセル") 
+                                   .submit.btn
+                                        input(type="submit" value="変更する")
+                                        
+               
+               <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+               script(src="js/mypage_edit.js") 

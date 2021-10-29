@@ -1,0 +1,381 @@
+@import "ress";
+@import "common";
+@import "var";
+@import "_mixin";
+@import "header";
+@import "footer";
+
+body {
+  background-color: $bgColor;
+  font-weight: 600;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2,
+p {
+  color: $textColor;
+}
+
+h3,
+h4 {
+  color: $mainColor;
+}
+
+h2 {
+  margin: 15vh 0 50px;
+  text-align: center;
+  font-size: 3.4em;
+  font-family: $suzume;
+}
+
+.serach {
+  width: 400px;
+  display: flex;
+
+  position: relative;
+  input {
+    @include fullSize;
+    display: block;
+    padding: 11px 0;
+    padding-left: 46px;
+    border-radius: 19px;
+    background-color: #fff;
+  }
+  span {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/search_icon.svg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    margin: auto 0;
+  }
+}
+
+// =========コンテンツ============
+.contentWrap {
+  height: 960px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 8em;
+}
+
+.contents {
+  background-color: #fff;
+  border-radius: 21px;
+}
+
+h3 {
+  font-size: 2.4em;
+}
+
+// 一番左
+.contentLeft {
+  width: 317px;
+}
+
+// 真ん中
+.contentCenter {
+  width: 411px;
+  .postListWrap {
+    height: 100%;
+  }
+}
+
+// 一番右
+.contentRight {
+  width: 206px;
+}
+
+//----プロフィール----
+.profileWrap {
+  padding: 50px - 32px 30px 50px;
+  h3 {
+    text-indent: -10000px;
+  }
+}
+.profileFlex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  .profileInfo {
+    width: 130px;
+    //   border: 1px solid red;
+    margin-left: 23px;
+    .name {
+      font-size: 2em;
+      letter-spacing: 5px;
+    }
+    .regiNum {
+      margin-top: 14px;
+    }
+    .info {
+      font-size: 1.6em;
+      position: relative;
+      span {
+        //   border: 1px solid red;
+        position: absolute;
+        right: 0;
+        color: $mainColor;
+      }
+    }
+  }
+  .profileIconWrap {
+    width: 104px;
+    height: 104px;
+    border-radius: 13px;
+    background-color: #ffe553;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+}
+
+.profileWrap {
+  section {
+    h4 {
+      color: $textColor;
+      font-size: 1.9em;
+      margin-top: 30px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 70%;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: -6px;
+        background-color: $mainColor;
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1.6em;
+    }
+  }
+  .mailBtn {
+    width: 14em;
+    border-radius: 7px;
+    padding: 8px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: $mainColor;
+    a {
+      display: block;
+      @include fullSize;
+      text-align: center;
+      color: #fff;
+      &:link,
+      &:visited {
+        @include link(#fff);
+      }
+    }
+  }
+}
+
+// ----投稿----
+.postWrap {
+  height: 497px;
+  margin-top: 32px;
+  padding: 26px 18px;
+}
+
+.postDays {
+  .postDay {
+    height: 30px;
+    border-bottom: 1px solid $mainColor;
+    a {
+      display: block;
+      line-height: 30px;
+      font-size: 1.4em;
+      color: $mainColor;
+      font-weight: 200;
+      &:link,
+      &:visited {
+        @include link($mainColor);
+      }
+    }
+    &:first-child {
+      margin-top: 4.4em;
+    }
+    time {
+      span {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+// ----投稿一覧----
+.postListWrap {
+  padding: 2.5em 3em;
+  h3 {
+    margin-bottom: 26px;
+  }
+  > a {
+    display: block;
+    transition: 0.3s;
+    &:visited,
+    &:link {
+      @include link;
+    }
+    &:hover {
+      background-color: lighten($color: $mainColor, $amount: 18);
+    }
+  }
+  section {
+    padding: 23px 0 20px;
+    // background-color: lemonchiffon;
+    border-bottom: 1px solid #c7c7c7;
+    position: relative;
+    h4 {
+      font-size: 2em;
+    }
+    p {
+      color: #c8c8c8;
+      font-size: 1.2em;
+    }
+    p.postTxt,
+    p.answer {
+      font-size: 1em;
+    }
+    p.commentNum {
+      color: #919191;
+    }
+    p.postTxt {
+      margin-top: 12px;
+      margin-left: 13px;
+    }
+    p.answer {
+      margin-left: 6em;
+      margin-top: 2.1em;
+      padding: 2px 0;
+      padding-left: 10px;
+      border-left: 3px solid #c7c7c7;
+    }
+    p.postTime {
+      position: absolute;
+      top: 3.2em;
+      right: 1.7em;
+    }
+    .commentNum {
+      position: absolute;
+      bottom: 1.2em;
+      right: 1.7em;
+    }
+  }
+}
+.pageBtn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 23px;
+  //   background-color: lightgoldenrodyellow;
+  p {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    border-radius: 7px;
+    background-color: #ffccd9;
+    font-size: 1.6em;
+    margin: 0 4px;
+    &:first-child {
+      background-color: $mainColor;
+    }
+    a {
+      display: block;
+      &:link,
+      &:visited {
+        @include link(#fff);
+      }
+    }
+  }
+}
+
+// ----病院登録----
+.hospitalWrap {
+  padding: 18px;
+  section {
+    margin-top: 36px;
+  }
+  h4 {
+    color: $textColor;
+    font-size: 1.6em;
+    position: relative;
+    line-height: 16px;
+    padding-left: 10px;
+    margin-top: 24px;
+    &::before {
+      content: "";
+      width: 5px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .red {
+    &::before {
+      background-color: #ff0a0a;
+    }
+  }
+  .green {
+    &::before {
+      background-color: #acdd9a;
+    }
+  }
+  .blue {
+    &::before {
+      background-color: #549cfd;
+    }
+  }
+  p {
+    padding-left: 36px;
+    font-size: 1.6em;
+    font-weight: 100;
+    margin-top: 12px;
+  }
+  .num {
+    position: relative;
+    &::before {
+      text-align: center;
+      line-height: 22px;
+
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      background-color: #f73370;
+      border-radius: 50%;
+    }
+  }
+  .num1 {
+    &::before {
+      content: "1";
+    }
+  }
+
+  .num2 {
+    &::before {
+      content: "2";
+    }
+  }
+}

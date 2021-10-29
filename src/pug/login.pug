@@ -1,0 +1,46 @@
+doctype html
+html(lang="ja")
+     head
+          include _head.pug
+          link(rel="stylesheet" href="css/login.css")
+          title るぴなす-ログイン
+     body 
+          .bg
+               include _header.pug
+
+               .bg_warp
+                    .bg_warp_l
+                         .bg_warp_l_bg
+                              //- img(src="img/cloud.png", alt="cloud")
+                              p
+                              | 婦人科の先生にあなたが不安に思っていることを
+                              br
+                              | 相談することができます。
+                              br
+                              | 婦人科へのスムーズな予約対応や、家族へ妊娠した
+                              br
+                              | 事実を医師と共に伝えることができます。
+
+                    .bg_warp_r
+                         .bg_warp_r_bg
+                              .bg_warp_r_bg_font
+                                   form(action="") 
+                                        .mail
+                                             p メールアドレス
+                                             input(type="text" name="mail")
+
+                                        .password
+                                             p パスワード
+                                             p
+                                                  input(type="text" name="password")
+                                                  //- <i class="toggle-pass fa fa-eye-slash"></i>
+
+                                        p.pass_for 
+                                            a(href="")  パスワードを忘れた人はこちら
+                                        
+                                        .bg_warp_r_bg_font_btn
+                                             //- a.login(href="") ログインする
+                                             input(type="submit")
+
+                                        .bg_warp_r_bg_font_btn
+                                             a.register(href="registration.php") 新規登録をする

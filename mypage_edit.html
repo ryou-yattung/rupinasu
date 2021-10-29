@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-dtection" content="telephone=no">
+    <meta name="keyword" content="">
+    <meta name="descripion" content="ここに説明文を設定">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@twitteraccount">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:title" content="サイトタイトル">
+    <meta property="og:description" content="サイト説明文">
+    <meta property="og:url" content="https://www.hogehoge.com">
+    <meta property="og:image" content="https://www.hogehoge.com./hoge.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="http://www.hoge.hoge/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="http://www.hoge.hoge/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mypage_edit.css">
+    <title>プロフィール編集 </title>
+  </head>
+  <body> 
+    <header>
+      <h1 class="logo"><a href="homepage.html"> <img src="img/logo.png" alt="logo"></a></h1>
+      <nav class="gnavi_flex">
+        <ul class="flex">
+          <li class="li_h"><a href="board.html">掲示板を見る</a></li>
+          <li class="li_h"><a href="#">診断をする</a></li>
+          <li><a href="">るぴなすの<br>アプリについて</a></li>
+          <li><a id="btn_login_a" href="login.php">ログインする</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main> 
+      <h2>マイページ</h2>
+      <div class="profileBg">
+        <div class="iconWrap"> 
+          <label> <img class="icon_img" src="" alt="">
+            <input class="img_font" type="file" name="file">
+          </label>
+          <p>プロフィール写真を変更         </p>
+        </div>
+        <div class="profileWrap"> 
+          <form action="" method=""> 
+            <div class="name form_left">   
+              <label for="">名前</label>
+              <input type="text" placeholder="みーちゃん">
+            </div>
+            <div class="age form_left"> 
+              <label for="">年齢</label>
+              <input type="text" placeholder="18" maxlength="2">
+            </div>
+            <div class="gender form_left"> 
+              <label>性別</label>
+              <div class="gender_input">
+                <input type="radio" name="drone">
+                <label class="radio01" for="">男性</label>
+              </div>
+              <div class="gender_input">
+                <input class="gender_border" type="radio" name="drone">
+                <label class="radio01" for="">女性</label>
+              </div>
+            </div>
+            <div class="introWrap">
+              <label class="form_left" for="">自己紹介</label><textarea name="sampleName" placeholder="初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。"></textarea>
+            </div>
+            <div class="btnWrap"> 
+              <div class="cancel btn">
+                <input type="reset" value="キャンセル">
+              </div>
+              <div class="submit btn">
+                <input type="submit" value="変更する">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="js/mypage_edit.js"> </script>
+    </main>
+  </body>
+</html>

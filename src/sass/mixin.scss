@@ -1,0 +1,9 @@
+@mixin fullSize($w: 100%, $h: 100%) {
+  width: $w;
+  height: $h;
+}
+
+@mixin link($color: $textColor) {
+  color: $color;
+  text-decoration: none;
+}

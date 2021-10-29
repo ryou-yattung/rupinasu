@@ -1,0 +1,95 @@
+body{
+     font-family: 'M PLUS Rounded 1c', sans-serif;
+     color: #59414C;
+ }
+
+header{
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: nowrap;
+     width: 100vw;
+     height:  10vh;
+     background: rgba(255,255,255,0.5);
+     font-size: 14px;
+     font-weight: bold;
+     position: fixed;
+     top: 0;
+     z-index: 100;
+}
+
+.bg{
+     width: 100vw;
+     height: 100vh;
+     background: url(../img/index_image.png) center/cover no-repeat;
+     background-color:rgba(255,255,255,0.3);
+     background-blend-mode:lighten;
+}
+
+h1{
+     margin-left: 40px; 
+     display: flex;
+     align-items: center;
+     flex-wrap: nowrap;
+     width: 120px;
+     height: 100%;
+}
+
+h1 img{ 
+     width: 67px;
+     height: 55px;
+}
+
+.gnavi_flex{ 
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     align-items: center;
+     height: 100%;
+     width: 80%;
+}
+
+.flex{
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-around;
+     list-style: none;
+     width: 100%;
+}
+
+.flex li{
+     text-align: center;
+     height: 40px;
+     width:130px;
+     /* width: 100px; */
+}
+
+.flex li a{
+     color: #59414C;
+     text-decoration: none;
+     /* font-size: 1.5rem; */
+     /* height: 100%;
+     width: 100%;
+     display: block;
+     background: #FF8EB1;
+     border-radius: 50px; */
+ }
+
+ .li_h{
+     padding: 10px;
+ }
+
+.btn_login{
+     height: 40px;
+     width: 130px;
+}
+
+#btn_login_a{
+     height: 100%;
+     width: 100%;
+     display: block;
+     background: #FF8EB1;
+     border-radius: 50px;
+     padding: 10px;
+     box-shadow: rgb(230, 230, 230) 0px -3px 0px inset;
+     color: white;
+}

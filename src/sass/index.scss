@@ -1,0 +1,95 @@
+@import "ress";
+@import "common";
+@import "var";
+@import "_mixin";
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: $textColor;
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/index_image.png) center/cover no-repeat;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+    overflow: scroll;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    padding-top: 80px;
+    text-align: center;
+    animation: an_h1 1s ease-out;
+  }
+
+  @keyframes an_h1 {
+    0% {
+      padding-top: 0px;
+      opacity: 0;
+    }
+    100% {
+      padding-top: 80px;
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    width: 320px;
+    height: 266px;
+    margin: 60px auto 0;
+    animation: an_logo 2s ease-in-out;
+  }
+
+  @keyframes an_logo {
+    0% {
+      margin-top: 0px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 60px;
+      opacity: 1;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-top: 50px;
+    text-align: center;
+    animation: an_p 2.5s ease-in-out;
+  }
+
+  @keyframes an_p {
+    0% {
+      margin-top: 0px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 50px;
+      opacity: 1;
+    }
+  }
+
+  .btn_top {
+    width: 100px;
+    height: 128px;
+    text-align: center;
+    margin: 50px auto 0;
+    animation: an_btn 3s ease-in-out;
+  }
+
+  @keyframes an_btn {
+    0% {
+      margin-top: 0px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 50px;
+      opacity: 1;
+    }
+  }
+
+  .btn_top a:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,136 @@
+doctype html
+html(lang='ja')
+  head
+    include _head.pug
+    link(rel="stylesheet" href="css/mypage.css")
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+
+
+    title るぴなす-マイページ
+    
+  body
+    include _header.pug
+    main
+      h2 マイページ
+      .serach 
+        input(type="text" placeholder="自分と似た悩みを検索する")
+        span
+      .contentWrap 
+        .contentLeft 
+          .contents.profileWrap
+            h3 プロフィール
+            .profileFlex
+              .profileInfo
+                //-後で見えないようにする 
+                p.name みーちゃん
+                p.age.info 18
+                  span 女性
+                p.regiNum.info 登録数
+                  span 28
+                p.postNum.info 投稿数
+                  span 48
+              .profileIconWrap
+                img(src="img/profileIcon.svg", alt="")
+            section 
+              h4 自己紹介
+              p 初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。
+            .mailBtn 
+              a(href="") この人にメールする
+          .contents.postWrap
+            section 
+              h3 投稿
+              .postDays
+                .postDay
+                  a(href="")
+                    time(datetime="2021-02-10") 2021.02.10
+                      span (2)
+                .postDay
+                  a(href="")
+                    time(datetime="2021-04-16") 2021.04.16
+                      span (4)
+                .postDay
+                  a(href="")
+                    time(datetime="2021-06-21") 2021.06.21
+                      span (2)
+        .contentCenter
+          .contents.postListWrap
+            h3 投稿一覧
+            a(href="#")  
+              section
+                h4 彼氏に打ち明けた方が良い…
+                p.postTxt 付き合いだして３ヶ月目、彼氏の家でそういう雰囲気になり…
+                
+                p.answer
+                  |うらやましいですね・・・
+                  br
+                  |僕は童貞です。
+                p.postTime 2時間前
+                p.commentNum コメント数2 
+            a(href="#")  
+              section
+                h4 彼氏に打ち明けた方が良い…
+                p.postTxt 付き合いだして３ヶ月目、彼氏の家でそういう雰囲気になり…
+                
+                p.answer
+                  |うらやましいですね・・・
+                  br
+                  |僕は童貞です。
+                p.postTime 2時間前
+                p.commentNum コメント数2 
+            a(href="#")  
+              section
+                h4 彼氏に打ち明けた方が良い…
+                p.postTxt 付き合いだして３ヶ月目、彼氏の家でそういう雰囲気になり…
+                
+                p.answer
+                  |うらやましいですね・・・
+                  br
+                  |僕は童貞です。
+                p.postTime 2時間前
+                p.commentNum コメント数2 
+            a(href="#")  
+              section
+                h4 彼氏に打ち明けた方が良い…
+                p.postTxt 付き合いだして３ヶ月目、彼氏の家でそういう雰囲気になり…
+                
+                p.answer
+                  |うらやましいですね・・・
+                  br
+                  |僕は童貞です。
+                p.postTime 2時間前
+                p.commentNum コメント数2 
+            a(href="#")  
+              section
+                h4 彼氏に打ち明けた方が良い…
+                p.postTxt 付き合いだして３ヶ月目、彼氏の家でそういう雰囲気になり…
+                
+                p.answer
+                  |うらやましいですね・・・
+                  br
+                  |僕は童貞です。
+                p.postTime 2時間前
+                p.commentNum コメント数2 
+            .pageBtn
+              p 
+                a(href="#")  1
+              p 
+                a(href="#")  2
+        .contentRight
+          .contents.hospitalWrap
+            h3 病院登録
+            section 
+              h4.red 三木病院
+              p.num.num2 大塚 正明
+              p 浅井 波瑠
+              p 小柄井 流花
+            section 
+              h4.green 渡邊病院
+              p 犬井 奈津子
+              p.num.num1 原井 朱里
+              p 内藤 白亜
+            section 
+              h4.blue リョウ病院
+              p 小原 愛
+              p.num.num2 小松 春菜
+          .contents.calendarWrap
+    include _footer.pug

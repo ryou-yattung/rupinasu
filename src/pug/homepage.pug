@@ -1,0 +1,210 @@
+doctype html
+html(lang='ja')
+  head
+          include _html3_01_head.pug
+          link(rel="stylesheet" href="css/homepage.css")
+          link(rel="preconnect" href="https://fonts.gstatic.com")
+          link(href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet")
+          title るぴなす
+  body
+    .bg
+      include _header.pug
+         
+      .bg_warp
+        .bg_warp_l
+          .cloud
+            p
+              | 婦人科の先生にあなたが不安に思っていることを
+              br
+              | 相談することができます。
+              br
+              | 婦人科へのスムーズな予約対応や、家族へ妊娠した
+              br
+              | 事実を医師と共に伝えることができます。
+        .bg_warp_r
+          p.title 
+            img(src='img/bg_font.png' alt='')
+ 
+    main
+      #main.warp_main
+        section.intro
+          h3.introduction るぴなすについて
+            //- img(src='img/intro_font.png' alt='')
+          p.introduction_h1
+            | るぴなすは若い歳で妊娠した女性や、妊娠したかもしれないと悩む女性に相談する場を設け、
+            br
+            | 女性にとっても赤ちゃんにとっても、最悪の事態を避けたい。という思いから実現したサービスです。
+            br
+            | この先どうするか、どうしたいかを婦人科の先生と共に考え、最後まであなたをサポートします。
+            br
+            | まずは1人で抱えず、誰かに相談することから始めましょう。
+          p.introduction_h2
+            //- img(src='img/intro_p.png' alt='')
+            |サイトのイメージフラワーである白いルピナスは、
+            br
+            |「つねに幸福」「あなたは私のこころに和らぎをあたえる」
+            br
+            |という花言葉を持っています。
+
+          .flower_bg
+            img.grass(src='img/grass.png' alt='')
+            img.flower(src='img/flower.png' alt='')
+
+
+      .warp_use
+        section.use_bg
+          h3 るぴなすの使い方
+            //- img(src='img/use_font.png' alt='')
+          .use.use_1
+            .use_l.use_l_1
+              h4
+                | 新規登録しよう。
+              p
+                | 様々な悩みや不安を少しでも解決できるように、
+                br
+                | 産婦人科医師の皆様と協力し、サイト内での
+                br
+                | カウンセリングを行なっています。まずはサイト
+                br
+                | にログインしてください。
+            .use_r_p1
+          .use.use_2
+            .use_l.use_l_2
+              h4
+                | 婦人科の先生に相談しよう。
+              p
+                | 相談する先生を決め、不安に思っていることや、
+                br
+                | これからのことについて話し合いましょう。
+                br
+                | 1人で全てを抱え込まず、一度悩みを誰かに相談
+                br
+                | してください。相談時は匿名でも構いません。
+            .use_r_p2
+          .use.use_3
+            .use_l.use_l_3
+              h4
+                | これからを決めよう。
+              p
+                | 相談が終わったあとのあなたもるぴなすは支え
+                br
+                | ます。アドバイスをくれた先生の病院へ行けたり
+                br
+                | 病院が妊娠した事実をあなたの家族に伝えたり。
+                br
+                | 不安な今を一緒に変えましょう。
+            .use_r_p3
+
+
+          .acc
+            .acc_create.btn.btn_1
+              // <a class="btn_anime" href="">
+              p 新規登録をする
+              // </a>
+            .acc_login.btn.btn_2 
+              // <a class="btn_anime" href="">
+              p ログインする
+              // </a>
+
+
+              // まだのやつ
+        section.warp_bulletin
+          h3 るぴなすけいじばんについて
+            //- img(src='img/bulletin_font.png' alt='')
+          p 
+            |相談に乗ってくださるのは、婦人科の先生方です。悩みを投稿したり、他のユーザーの解決済みの投稿を見れたりすることができます。
+            br
+            |相談内容を医師以外にしか見られたくない、匿名で相談したい方も安心して相談できる掲示板です。
+
+          .warp_bulletin_ask.warp_bulletin_both
+            .warp_bulletin_ask_left 
+              .warp_bulletin_ask_left_img
+
+              p 
+                |今年から私も就職予定だったのですが
+                br
+                |妊娠したため悩んでいます。妊娠の事実はまだ誰にも
+                br
+                |話せていません。
+
+            .warp_bulletin_ask_right
+              img(src="img/use_p4.png", alt="")
+
+          .warp_bulletin_listen.warp_bulletin_both
+            .warp_bulletin_listen_right
+              img(src="img/use_p5.png", alt="")
+
+            .warp_bulletin_listen_left 
+              p 
+                |心中お察しします。まず、あなたの体調は
+                br
+                |いかがですか？産婦人科には通われています
+                br
+                |か？つわりの具合なども…
+
+          .warp_bulletin_listen_btc 
+            a(href="board.html") 掲示板を見にいく
+              
+
+              
+
+
+
+        section.warp_diagnosis
+          h3 しんだんをする
+            //- img(src='img/diagnosis_font.png' alt='')
+          p.diagnosis_p
+            | 相談に乗ってくれる医師の方にあなたのことををよく知ってもらうため、3つの項目に答えてもらいます。
+            br
+            | 新規登録しなくても利用できます。
+          .warp_bulletin_flex.warp_diagnosis_flex
+            .warp_diagnosis_flex_p
+              img(src='img/bulletin_p1.png' alt='')
+              p 心の状態やつわりなどの
+                span 心身の具合
+            .warp_diagnosis_flex_p
+              img(src='img/bulletin_p2.png' alt='')
+              p 
+                |現在誰に伝えているかなどの
+                br
+                |あなたの
+                span 今の状況
+            .warp_diagnosis_flex_p
+              img(src='img/bulletin_p3.png' alt='')
+              p 自分が<span>どうしたい</span>と思っているか
+              
+          .warp_diagnosis_btn
+            a(href="") 診断してみる
+              
+
+        section.wrap_app
+          h3 るぴなすのアプリについて
+            //- img(src='img/app_font.png' alt='')
+            
+          .wrap_app_intro
+            img(src='img/app.png' alt='')
+
+            .wrap_app_intro_text.app_intro_text_l
+              p
+                | テキストが入ります。テキストが入ります。
+            .wrap_app_intro_text.app_intro_text_r
+              p
+                | テキストが入ります。テキストが入ります。
+          .warp_bulletin_btn
+            a(href='') アプリについて詳しくみる
+
+        .app_store
+          a(href='')
+            img.apple(src='img/apple.png' alt='')
+          a(href='')
+            img.google(src='img/google.png' alt='')
+
+
+        include _footer.pug 
+            p &copy;Rupinasu All Rights Reserved. 
+        
+
+    script(src='js/bubbly-bg.js')
+    script(src='js/anime.min.js')
+    script(src='js/jquery-3.6.0.min.js')
+    script(src='js/homepage.js')

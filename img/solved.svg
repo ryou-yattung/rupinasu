@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="グループ_137" data-name="グループ 137" transform="translate(-387 -414.548)">
+    <text id="解決済み" transform="translate(390.822 433.191) rotate(17)" fill="#ff5f90" font-size="8" font-family="HiraginoUDSansRStd-W6, Hiragino UD Sans Rd Std"><tspan x="0" y="0">解決済み</tspan></text>
+    <g id="楕円形_107" data-name="楕円形 107" transform="translate(387 414.548)" fill="none" stroke="#ff5f90" stroke-width="2">
+      <circle cx="20" cy="20" r="20" stroke="none"/>
+      <circle cx="20" cy="20" r="19" fill="none"/>
+    </g>
+  </g>
+</svg>
