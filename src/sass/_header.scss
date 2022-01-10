@@ -66,12 +66,6 @@ h1 img{
 .flex li a{
      color: #59414C;
      text-decoration: none;
-     /* font-size: 1.5rem; */
-     /* height: 100%;
-     width: 100%;
-     display: block;
-     background: #FF8EB1;
-     border-radius: 50px; */
  }
 
  .li_h{
@@ -92,4 +86,23 @@ h1 img{
      padding: 10px;
      box-shadow: rgb(230, 230, 230) 0px -3px 0px inset;
      color: white;
+}
+
+// .login_btn{
+//      display: none;
+// }
+
+.login_logo{
+     display: flex;
+     align-items: center;
+     display: none;
+
+     img{ 
+          width: 40px;
+          height: 40px;
+     }
+
+     p{
+          padding-left: 15px;
+     }
 }

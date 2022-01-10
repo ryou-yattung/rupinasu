@@ -1,0 +1,134 @@
+// バナー
+.bannerWrap {
+     width: 200px;
+     position: absolute;
+     top: 300px;
+     right: 0;
+   }
+   
+   .postBtn {
+     background-color: $mainColor;
+     width: 250px;
+     height: 50px;
+     border-radius: 25px;
+     a {
+       @include fullSize;
+       display: block;
+       letter-spacing: 3px;
+       font-size: 1.4em;
+       text-align: center;
+       line-height: 50px;
+       font-weight: 100;
+       &:visited,
+       &:link {
+         color: #fff;
+         text-decoration: none;
+       }
+     }
+   }
+   
+   .banner1 {
+     width: 250px;
+     margin-top: 24px;
+     a {
+       display: block;
+       width: 100%;
+       img {
+         width: 100%;
+       }
+     }
+   }
+   
+   .banner2 {
+     width: 250px;
+     margin-top: 16px;
+     a {
+       display: block;
+       width: 100%;
+       img {
+         width: 100%;
+       }
+     }
+   }
+   
+   .banner3{
+     width: 250px;
+     height: 380px;
+     margin-top: 24px;
+     background: #FFFFFF;
+     border-radius: 10px;
+     
+     & > h4{
+       font-size: 1.6rem;
+       text-align: center;
+       padding-top: 16px;
+       color: $green;
+     }
+   
+     ul{
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+       font-size: 1.4rem;
+       color: $textColor;
+       width: 230px;
+       height: 330px;
+       margin: 0 auto;
+       padding-top: 25px;
+   
+       li{
+         width: 50%;
+         height: 10%;
+         list-style: none;
+         text-align: left;
+         padding-left: 50px;
+         cursor: pointer;
+         position: relative;
+   
+         &::before{
+           content: "";
+           position: absolute;
+           left: 20px;
+           width: 16px;
+           height: 16px;
+           display: block;
+           background: url(../img/post_tag.png);
+         }
+       }
+     }
+   }
+   
+   // 個別相談
+   .postDoctor{
+     width: 250px;
+     height: 230px;
+     margin-top: 24px;
+     background: #FFFFFF;
+     border-radius: 10px;
+     text-align: center;
+     cursor: pointer;
+   
+     img{
+       width: 97px;
+       height: 78px;
+       margin-top: 24px;
+     }
+   
+     & > h4{
+       font-size: 1.6rem;
+       text-align: center;
+       color: $green;
+   
+       img{
+         width: 9px;
+         height: 10px;
+         padding-left: 4px;
+       }
+     }
+   
+     p{
+       width: 100%;
+       padding-top: 16px;
+       font-size: 1.6rem;
+     }
+   }

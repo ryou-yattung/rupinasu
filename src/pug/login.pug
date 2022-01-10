@@ -3,6 +3,8 @@ html(lang="ja")
      head
           include _head.pug
           link(rel="stylesheet" href="css/login.css")
+          script(src='js/jquery-3.6.0.min.js')
+          script(src="js/registration.js") 
           title るぴなす-ログイン
      body 
           .bg
@@ -32,15 +34,15 @@ html(lang="ja")
                                         .password
                                              p パスワード
                                              p
-                                                  input(type="text" name="password")
-                                                  //- <i class="toggle-pass fa fa-eye-slash"></i>
+                                                  input(type="password" name="password")
+                                                  <i class="toggle-pass fa fa-eye-slash"></i>
 
                                         p.pass_for 
                                             a(href="")  パスワードを忘れた人はこちら
                                         
                                         .bg_warp_r_bg_font_btn
                                              //- a.login(href="") ログインする
-                                             input(type="submit")
+                                             input(type="submit" value="ログインする")
 
                                         .bg_warp_r_bg_font_btn
-                                             a.register(href="registration.php") 新規登録をする
+                                             a.register(href="registration.php") 新規登録をする   

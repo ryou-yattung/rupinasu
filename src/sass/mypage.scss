@@ -169,14 +169,15 @@ h3 {
     }
   }
   .mailBtn {
-    width: 14em;
+    width: 140px;
+    height: 33px; 
     border-radius: 7px;
     padding: 8px;
     margin: 0 auto;
     margin-top: 20px;
     background-color: $mainColor;
     a {
-      display: block;
+      display: block; 
       @include fullSize;
       text-align: center;
       color: #fff;

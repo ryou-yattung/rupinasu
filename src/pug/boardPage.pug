@@ -3,8 +3,181 @@ html(lang="ja")
      head
           include _head.pug
           link(rel="stylesheet" href="css/boardPage.css")
-          title 掲示板ページ 内容見れるページ
+          title 掲示板内容るページ
      body 
           include _header.pug
-
           main
+               //- h2+serach
+               include _serach.pug 
+
+               //- コンテンツ
+               .postTag
+                    p.dropright るぴなすけいじばん
+                    p.dropright 妊娠タグがついた投稿
+                    p かなこさんの投稿
+
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         .solve
+                              <span>1</span>回答
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon2.svg")
+                              p かなこ
+                              p 18歳
+                         section
+                              p 私の家は母子家庭で、母も仕事で家に帰ってこず、ずっと彼の家で暮らしていました。彼は私より年上で、働いています。今年から私も就職予定だったのですが妊娠したため悩んでいます。妊娠の事実はまだ誰にも話せていません。妊娠３ヶ月で、彼の答え次第で堕ろすことも考えています.
+                                   <span>続きを読む</span>
+
+               .postWrap  
+                    .sol <span>1</span>件の回答
+                    .profFlex 
+                         .profWrap
+                              img(src="img/momoi.png")
+                              p リョウ婦人科医院
+                              p.teacher 桃井ケイコ先生
+                              p の回答
+                         section 
+                              p.profWrap_border
+                                   |心中お察しします。まず、あなたの体調はいかがですか？産婦人科には通われています
+                                   br
+                                   |か？つわりの具合なども…心中お察しします。まず、あなたの体調はいかがですか？産
+                                   br
+                                   |婦人科には通われていますか？つわりの具合なども…心中お察しします。まず、あなた
+                                   br
+                                   |の体調はいかがですか？産婦人科には通われていますか？つわりの具合なども…心中
+                                   br
+                                   |お察しします。
+                    .profSolve
+                         img.subdirectory(src="img/subdirectory.png", alt="")
+                         .profWrap
+                                   img(src="img/icon2.svg")
+                                   p かなこ
+                                   p 18歳
+                                   p の返信
+     
+
+               .postTag
+                    p 「妊娠」のタグがついた投稿
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         p.dateWrap_com コメント数2
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon1.svg")
+                              p みーちゃん
+                              p 18歳
+                    section
+                         a(href="") 
+                              h3 彼氏の子を授かりました。
+                         p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+                    .solved 
+                         img(src="img/solved.svg", alt="")
+                    
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         p.dateWrap_com コメント数2
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon2.svg")
+                              p かなこ
+                              p 18歳
+                    section
+                         a(href="") 
+                              h3 彼氏の子を授かりました。
+                         p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+               p.seeMore もっとみる
+
+               .postTag
+                    p 「母子家庭」のタグがついた投稿
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         p.dateWrap_com コメント数2
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon1.svg")
+                              p みーちゃん
+                              p 18歳
+                    section
+                         a(href="") 
+                              h3 彼氏の子を授かりました。
+                         p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+                    
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         p.dateWrap_com コメント数2
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon2.svg")
+                              p かなこ
+                              p 18歳
+                    section
+                         a(href="") 
+                              h3 彼氏の子を授かりました。
+                         p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+                         .solved 
+                              img(src="img/solved.svg", alt="")
+               p.seeMore もっとみる
+
+               .postTag
+                    p 「未成年」のタグがついた投稿
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         p.dateWrap_com コメント数2
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon1.svg")
+                              p みーちゃん
+                              p 18歳
+                    section
+                         a(href="") 
+                              h3 彼氏の子を授かりました。
+                         p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+                         .solved 
+                              img(src="img/solved.svg", alt="")
+                    
+               .postWrap
+                    .dateWrap   
+                         p.dateWrap_bday 2022.7.17 
+                         p.dateWrap_tag 妊娠
+                         p.dateWrap_tag 未成年
+                         p.dateWrap_com コメント数2
+                    .profFlex  
+                         .profWrap
+                              img(src="img/icon2.svg")
+                              p かなこ
+                              p 18歳
+                    section
+                         a(href="") 
+                              h3 彼氏の子を授かりました。
+                         p 回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。
+                         .solved 
+                              img(src="img/solved.svg", alt="")
+               p.seeMore もっとみる
+
+
+
+
+               //- コンテンツ終わり
+
+               //- banner
+               include _banner.pug
+          include _footer.pug 

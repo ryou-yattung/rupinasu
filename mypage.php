@@ -1,3 +1,13 @@
+<?php
+     require('sqlConnect.php');
+
+     session_start();
+
+    if($_SESSION['email']){
+      $age = $_SESSION['age'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -38,6 +48,7 @@
       </nav>
     </header>
     <main>
+    <input type="hidden" name="id" value="<?= $user['id']?>">
       <h2>マイページ</h2>
       <div class="serach"> 
         <input type="text" placeholder="自分と似た悩みを検索する"><span></span>
@@ -48,7 +59,7 @@
             <h3>プロフィール</h3>
             <div class="profileFlex">
               <div class="profileInfo">
-                <p class="name">みーちゃん</p>
+                <p class="name"><?php echo $_SESSION['age']; ?></p>
                 <p class="age info">18<span>女性</span></p>
                 <p class="regiNum info">登録数<span>28</span></p>
                 <p class="postNum info">投稿数<span>48</span></p>
@@ -59,7 +70,7 @@
               <h4>自己紹介</h4>
               <p>初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。</p>
             </section>
-            <div class="mailBtn"> <a href="">この人にメールする</a></div>
+            <div class="mailBtn"> <a href="mypage_edit.php">プロフィール編集</a></div>
           </div>
           <div class="contents postWrap">
             <section> 

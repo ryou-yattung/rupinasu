@@ -3,12 +3,12 @@ html(lang="ja")
      head
           include _head.pug
           link(rel="stylesheet" href="css/registration.css")
+          script(src='js/jquery-3.6.0.min.js')
+          script(src="js/registration.js") 
           title るぴなす-新規登録
      body 
           .bg
                include _header.pug
-               //- div 
-               //-      img(src="", alt="") 
                
           .acc
                .acc_form
@@ -28,9 +28,30 @@ html(lang="ja")
                               p こちらの氏名は公開されません。
                               <input type="text" name="name_kara" id="name_kara" placeholder="例：アサハラ　ミナミ" required>
 
-                         .acc_form_phoneNum.acc_form_margin
+                         .sex.acc_form_margin
+                              h2 性別
+                              input(type="radio" name="drone")
+                              label.men(for="m") 男性
+                              input(type="radio" name="drone")
+                              label(for="f") 女性
+
+                         .birthday.acc_form_margin
                               h2 生年月日
-                              <input type="date" name="birthday" id="birthday" required>
+                              .bir 
+                                   .bir_after
+                                        select(id="year" name="year")
+                                             option(value="0")
+                                   .bir_after
+                                        select(id="month")
+                                             option(value="0")
+                                   
+                                   select(id="date")
+                                        option(value="0") 
+
+                         .age.acc_form_margin.age
+                              h2 年齢
+                              select(id="age")
+                                   option(value="0")
 
                          .acc_form_phoneNum.acc_form_margin
                               h2 電話番号
@@ -48,20 +69,26 @@ html(lang="ja")
                          .acc_form_password.acc_form_margin
                               h2 パスワード
                               p ６文字以上の半角英数字で入力して下さい
-                              <input type="text" name="password" id="password" placeholder="パスワード入力" required>
+                              .password_i
+                                   <input type="password" name="password" id="password" placeholder="パスワード入力" required>
+                                   <i class="toggle-pass fa fa-eye-slash"></i>
 
                          .acc_form_passwordConfirm.acc_form_margin
                               h2 パスワード(確認)
                               p ６文字以上の半角英数字で入力して下さい
-                              <input type="text" name="password_confirm" id="password_confirm" placeholder="パスワード入力" required>
+                              .password_i
+                                   <input type="password" name="password_confirm" id="password_confirm" placeholder="パスワード入力" required>
+                                   <i class="toggle-pass fa fa-eye-slash"></i>
 
                          .acc_form_confirm.acc_form_margin
                               <input type="checkbox" id="confirm"/>
                               label(for="confirm") 「個人情報の取り扱いについて」と「るぴなすの利用規約」に同意する
 
-                         .acc_form_btc
-                              a(href="") 登録する
+                         .acc_form_btn
+                              input(type="button" value="登録する")
 
           footer 
                p &copy;Rupinasu All Rights Reserved. 
+          
+         
                

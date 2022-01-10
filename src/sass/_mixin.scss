@@ -46,6 +46,48 @@
   }
 }
 
+//board.html  ".dateWrap"
+.dateWrap {
+  display: flex;
+  font-size: 1.6rem;
+  color: $textColor;
+  margin-bottom: 5px;
+  &_bday{
+    padding-right: 40px;
+  }
+  &_tag{
+    opacity: 0.6;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    &::before{
+      content: "";
+      display: block;
+      height: 18px;
+      width: 20px;
+      background: url(../img/tag.svg) no-repeat;
+      margin-left: 10px;
+    }
+  }
+  &_com{
+    padding-left: 120px;
+    display: flex;
+    align-items: center;
+    &::after{
+      content: "";
+      display: block;
+      height: 18px;
+      width: 20px;
+      background: url(../img/ball.svg) no-repeat;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+
+
 @mixin fullSize($w: 100%, $h: 100%) {
   width: $w;
   height: $h;

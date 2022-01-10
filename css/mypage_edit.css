@@ -384,6 +384,48 @@ body {
   font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
 }
 
+.dateWrap {
+  display: flex;
+  font-size: 1.6rem;
+  color: #59414c;
+  margin-bottom: 5px;
+}
+
+.dateWrap_bday {
+  padding-right: 40px;
+}
+
+.dateWrap_tag {
+  opacity: 0.6;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_tag::before {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/tag.svg) no-repeat;
+  margin-left: 10px;
+}
+
+.dateWrap_com {
+  padding-left: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_com::after {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/ball.svg) no-repeat;
+  margin-left: 10px;
+}
+
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #59414C;
@@ -452,12 +494,6 @@ h1 img {
 .flex li a {
   color: #59414C;
   text-decoration: none;
-  /* font-size: 1.5rem; */
-  /* height: 100%;
-     width: 100%;
-     display: block;
-     background: #FF8EB1;
-     border-radius: 50px; */
 }
 
 .li_h {
@@ -480,12 +516,28 @@ h1 img {
   color: white;
 }
 
+.login_logo {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.login_logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.login_logo p {
+  padding-left: 15px;
+}
+
 footer {
   width: 100%;
   height: 1000px;
   background: url(../img/font.png) center bottom no-repeat;
   background-size: contain;
   position: relative;
+  bottom: 0;
 }
 
 .footer_flex {
@@ -552,8 +604,13 @@ h2 {
   padding-left: 48px;
 }
 
-input:focus {
-  outline: none;
+.gender {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.gender .gender_input {
+  margin-left: 30px;
 }
 
 .profileBg {
@@ -593,70 +650,61 @@ input:focus {
   font-size: 1.6rem;
 }
 
-.profileWrap form {
+.profileWrap {
   font-size: 2.4rem;
 }
 
-.profileWrap form input {
+.profileWrap input {
   margin-bottom: 43px;
 }
 
-.profileWrap form input::-moz-placeholder {
+.profileWrap input::-moz-placeholder {
   font-size: 1.6rem;
 }
 
-.profileWrap form input:-ms-input-placeholder {
+.profileWrap input:-ms-input-placeholder {
   font-size: 1.6rem;
 }
 
-.profileWrap form input::placeholder {
+.profileWrap input::placeholder {
   font-size: 1.6rem;
 }
 
-.profileWrap form .name input {
+.profileWrap .name input {
   border-bottom: #707070 1px solid;
   margin-left: 48px;
   width: 300px;
 }
 
-.profileWrap form .age input {
+.profileWrap .age input {
   border-bottom: #707070 1px solid;
   margin-left: 48px;
   width: 30px;
 }
 
-.profileWrap form .gender {
+.profileWrap .sex {
+  margin-bottom: 43px;
+  font-size: 2.4rem;
   display: flex;
-  align-items: center;
+  justify-items: center;
 }
 
-.profileWrap form .gender .gender_input {
-  width: auto;
-  height: auto;
-  position: relative;
-  margin-left: 120px;
-}
-
-.profileWrap form .gender input[type=radio] {
-  width: 20px;
-  height: 20px;
-  top: 3px;
-  left: -40px;
-  position: absolute;
-}
-
-.profileWrap form .gender .gender_border::before {
+.profileWrap .sex .men::after {
   content: "/";
-  position: absolute;
-  top: -3px;
-  left: -45px;
+  margin-left: 40px;
+  margin-right: 30px;
 }
 
-.profileWrap form .introWrap {
-  margin-top: 43px;
+.profileWrap .sex input {
+  margin-bottom: 43px;
+  margin-left: 48px;
 }
 
-.profileWrap form .introWrap textarea {
+.profileWrap .introWrap {
+  margin-top: 20px;
+}
+
+.profileWrap .introWrap textarea {
   font-size: 1.6rem;
   letter-spacing: 1px;
   width: 900px;
@@ -667,20 +715,20 @@ input:focus {
   border: 1px #59414c solid;
 }
 
-.profileWrap form .introWrap label {
+.profileWrap .introWrap label {
   display: block;
   margin-bottom: 10px;
 }
 
-.profileWrap form .btnWrap {
+.profileWrap .btnWrap {
   width: 500px;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
 }
 
-.profileWrap form .btnWrap .btn,
-.profileWrap form .btnWrap input {
+.profileWrap .btnWrap .btn,
+.profileWrap .btnWrap input {
   width: 164px;
   height: 40px;
   text-align: center;
@@ -690,10 +738,10 @@ input:focus {
   border-radius: 5px;
 }
 
-.profileWrap form .btnWrap .cancel {
+.profileWrap .btnWrap .cancel {
   background: #CECECE;
 }
 
-.profileWrap form .btnWrap .submit {
+.profileWrap .btnWrap .submit {
   background: #FF8EB1;
 }

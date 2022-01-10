@@ -384,6 +384,48 @@ body {
   font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
 }
 
+.dateWrap {
+  display: flex;
+  font-size: 1.6rem;
+  color: #59414c;
+  margin-bottom: 5px;
+}
+
+.dateWrap_bday {
+  padding-right: 40px;
+}
+
+.dateWrap_tag {
+  opacity: 0.6;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_tag::before {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/tag.svg) no-repeat;
+  margin-left: 10px;
+}
+
+.dateWrap_com {
+  padding-left: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_com::after {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/ball.svg) no-repeat;
+  margin-left: 10px;
+}
+
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
   color: #59414c;

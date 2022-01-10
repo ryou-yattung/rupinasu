@@ -384,6 +384,48 @@ body {
   font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
 }
 
+.dateWrap {
+  display: flex;
+  font-size: 1.6rem;
+  color: #59414c;
+  margin-bottom: 5px;
+}
+
+.dateWrap_bday {
+  padding-right: 40px;
+}
+
+.dateWrap_tag {
+  opacity: 0.6;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_tag::before {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/tag.svg) no-repeat;
+  margin-left: 10px;
+}
+
+.dateWrap_com {
+  padding-left: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_com::after {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/ball.svg) no-repeat;
+  margin-left: 10px;
+}
+
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #59414C;
@@ -391,11 +433,16 @@ body {
 
 header {
   display: flex;
+  justify-content: space-around;
   flex-wrap: nowrap;
   width: 100vw;
   height: 10vh;
   background: rgba(255, 255, 255, 0.5);
   font-size: 14px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .bg {
@@ -408,11 +455,11 @@ header {
 
 h1 {
   margin-left: 40px;
-  margin-top: 10px;
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
   width: 120px;
-  height: 100px;
+  height: 100%;
 }
 
 h1 img {
@@ -447,12 +494,6 @@ h1 img {
 .flex li a {
   color: #59414C;
   text-decoration: none;
-  /* font-size: 1.5rem; */
-  /* height: 100%;
-     width: 100%;
-     display: block;
-     background: #FF8EB1;
-     border-radius: 50px; */
 }
 
 .li_h {
@@ -473,4 +514,444 @@ h1 img {
   padding: 10px;
   box-shadow: #e6e6e6 0px -3px 0px inset;
   color: white;
+}
+
+.login_logo {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.login_logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.login_logo p {
+  padding-left: 15px;
+}
+
+footer {
+  width: 100%;
+  height: 1000px;
+  background: url(../img/font.png) center bottom no-repeat;
+  background-size: contain;
+  position: relative;
+  bottom: 0;
+}
+
+.footer_flex {
+  width: 900px;
+  height: 75px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.footer_flex ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.footer_flex ul li {
+  width: 200px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.footer_flex ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.title {
+  width: 510px;
+  height: 140px;
+  background-image: url(../img/logo_back.svg);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+h2 {
+  font-family: ab-suzume, sans-serif;
+  font-size: 3em;
+  font-weight: 100;
+  text-align: center;
+  line-height: 140px;
+}
+
+.serach {
+  margin-top: 90px;
+  width: 400px;
+  display: flex;
+  position: relative;
+}
+
+.serach input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 11px 0;
+  padding-left: 50px;
+  border-radius: 19px;
+  background-color: #fff;
+  font-size: 1.6rem;
+  color: #59414C;
+}
+
+.serach input:focus {
+  outline: none;
+}
+
+.serach .search_left {
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-image: url(../img/search_icon.svg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  margin: auto 0;
+}
+
+.serach .search_right {
+  position: absolute;
+  right: 0;
+  width: 72px;
+  height: 100%;
+  background: #ff8eb1;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.serach .search_right::after {
+  content: "検索";
+  font-size: 1.6rem;
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  bottom: 0;
+  left: 18px;
+  margin: 0 auto;
+}
+
+.bannerWrap {
+  width: 200px;
+  position: absolute;
+  top: 300px;
+  right: 0;
+}
+
+.postBtn {
+  background-color: #ff8eb1;
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.postBtn a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  letter-spacing: 3px;
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 100;
+}
+
+.postBtn a:visited, .postBtn a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner1 {
+  width: 250px;
+  margin-top: 24px;
+}
+
+.banner1 a {
+  display: block;
+  width: 100%;
+}
+
+.banner1 a img {
+  width: 100%;
+}
+
+.banner2 {
+  width: 250px;
+  margin-top: 16px;
+}
+
+.banner2 a {
+  display: block;
+  width: 100%;
+}
+
+.banner2 a img {
+  width: 100%;
+}
+
+.banner3 {
+  width: 250px;
+  height: 380px;
+  margin-top: 24px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.banner3 > h4 {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 16px;
+  color: #acdd9a;
+}
+
+.banner3 ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1.4rem;
+  color: #59414c;
+  width: 230px;
+  height: 330px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.banner3 ul li {
+  width: 50%;
+  height: 10%;
+  list-style: none;
+  text-align: left;
+  padding-left: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.banner3 ul li::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: url(../img/post_tag.png);
+}
+
+.postDoctor {
+  width: 250px;
+  height: 230px;
+  margin-top: 24px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.postDoctor img {
+  width: 97px;
+  height: 78px;
+  margin-top: 24px;
+}
+
+.postDoctor > h4 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #acdd9a;
+}
+
+.postDoctor > h4 img {
+  width: 9px;
+  height: 10px;
+  padding-left: 4px;
+}
+
+.postDoctor p {
+  width: 100%;
+  padding-top: 16px;
+  font-size: 1.6rem;
+}
+
+body {
+  background-color: #fdedf1;
+  font-weight: 600;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.postTag {
+  display: flex;
+  margin-top: 51px;
+}
+
+.postTag > p {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  font-size: 1.4rem;
+}
+
+.postTag .dropright::after {
+  content: "";
+  background: url(../img/dropright.png);
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin-left: 8px;
+}
+
+.postWrap {
+  width: 70%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 16px;
+  border-radius: 10px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 2px 3px 6px #ded3d3;
+}
+
+.postWrap p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.postWrap p > span {
+  font-size: 1.4rem;
+  color: #ff8eb1;
+  border-bottom: 1px solid #ff8eb1;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.postWrap .solve {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+}
+
+.postWrap .solve > span {
+  color: #acdd9a;
+  font-size: 2.5rem;
+}
+
+.postWrap .sol {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.postWrap .sol > span {
+  font-size: 2rem;
+  color: #acdd9a;
+}
+
+.postWrap .solved {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 77px;
+  height: 77px;
+}
+
+.postWrap .solved img {
+  width: 100%;
+  height: 100%;
+}
+
+.postWrap h3 {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ff8eb1;
+  display: inline-block;
+  margin-top: 10px;
+  height: 30px;
+}
+
+.postWrap h3:hover {
+  text-decoration: underline;
+  color: #551A8B;
+}
+
+.seeMore {
+  margin-top: 16px;
+  padding-left: 63%;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.seeMore::after {
+  content: ">";
+  margin-left: 5px;
+}
+
+.profFlex {
+  align-items: center;
+  font-size: 1.4em;
+}
+
+.profFlex .profWrap {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.profFlex .profWrap p {
+  margin-left: 16px;
+}
+
+.profFlex .profWrap .teacher {
+  color: #ff8eb1;
+}
+
+.profFlex .profWrap_border {
+  border-bottom: 2px solid #59414C;
+  padding-bottom: 24px;
+}
+
+.profSolve {
+  height: 150px;
+  margin-top: 24px;
+  position: relative;
+}
+
+.profSolve .subdirectory {
+  position: absolute;
+  top: 12px;
+  left: 50px;
+}
+
+.profSolve .profWrap {
+  display: flex;
+  align-items: center;
+  margin-left: 92px;
+}
+
+.profSolve .profWrap p {
+  margin-left: 16px;
 }

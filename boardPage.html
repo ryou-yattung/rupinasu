@@ -21,8 +21,9 @@
     <link rel="shortcut icon" href="http://www.hoge.hoge/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="apple-touch-icon" href="http://www.hoge.hoge/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&amp;display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/boardPage.css">
-    <title>掲示板ページ 内容見れるページ</title>
+    <title>掲示板内容るページ</title>
   </head>
   <body> 
     <header>
@@ -32,10 +33,240 @@
           <li class="li_h"><a href="board.html">掲示板を見る</a></li>
           <li class="li_h"><a href="#">診断をする</a></li>
           <li><a href="">るぴなすの<br>アプリについて</a></li>
-          <li><a id="btn_login_a" href="login.php">ログインする</a></li>
+          <li class="login_btn"><a id="btn_login_a" href="login.php">ログインする</a></li>
+          <li class="login_logo"><img src="img/icon2.svg" alt="icon">
+            <p>みーちゃん </p>
+          </li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="title">
+        <h2>るぴなすけいじばん</h2>
+      </div>
+      <div class="serach"> 
+        <input type="text" placeholder="自分と似た悩みを検索する"><span class="search_left"> </span><span class="search_right"></span>
+      </div>
+      <div class="tagWrap"> 
+        <div class="tag"> </div>
+      </div>
+      <div class="postTag">
+        <p class="dropright">るぴなすけいじばん</p>
+        <p class="dropright">妊娠タグがついた投稿</p>
+        <p>かなこさんの投稿</p>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <div class="solve"><span>1</span>回答</div>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon2.svg">
+            <p>かなこ</p>
+            <p>18歳</p>
+          </div>
+          <section>
+            <p>
+              私の家は母子家庭で、母も仕事で家に帰ってこず、ずっと彼の家で暮らしていました。彼は私より年上で、働いています。今年から私も就職予定だったのですが妊娠したため悩んでいます。妊娠の事実はまだ誰にも話せていません。妊娠３ヶ月で、彼の答え次第で堕ろすことも考えています.<span>続きを読む</span></p>
+          </section>
+        </div>
+      </div>
+      <div class="postWrap"> 
+        <div class="sol"><span>1</span>件の回答</div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/momoi.png">
+            <p>リョウ婦人科医院</p>
+            <p class="teacher">桃井ケイコ先生</p>
+            <p>の回答</p>
+          </div>
+          <section> 
+            <p class="profWrap_border">心中お察しします。まず、あなたの体調はいかがですか？産婦人科には通われています<br>か？つわりの具合なども…心中お察しします。まず、あなたの体調はいかがですか？産<br>婦人科には通われていますか？つわりの具合なども…心中お察しします。まず、あなた<br>の体調はいかがですか？産婦人科には通われていますか？つわりの具合なども…心中<br>お察しします。</p>
+          </section>
+        </div>
+        <div class="profSolve"><img class="subdirectory" src="img/subdirectory.png" alt="">
+          <div class="profWrap"><img src="img/icon2.svg">
+            <p>かなこ</p>
+            <p>18歳</p>
+            <p>の返信</p>
+          </div>
+        </div>
+      </div>
+      <div class="postTag">
+        <p>「妊娠」のタグがついた投稿</p>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <p class="dateWrap_com">コメント数2</p>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon1.svg">
+            <p>みーちゃん</p>
+            <p>18歳</p>
+          </div>
+        </div>
+        <section><a href=""> 
+            <h3>彼氏の子を授かりました。</h3></a>
+          <p>回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。</p>
+        </section>
+        <div class="solved"> <img src="img/solved.svg" alt=""></div>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <p class="dateWrap_com">コメント数2</p>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon2.svg">
+            <p>かなこ</p>
+            <p>18歳</p>
+          </div>
+        </div>
+        <section><a href=""> 
+            <h3>彼氏の子を授かりました。</h3></a>
+          <p>回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。</p>
+        </section>
+      </div>
+      <p class="seeMore">もっとみる</p>
+      <div class="postTag">
+        <p>「母子家庭」のタグがついた投稿</p>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <p class="dateWrap_com">コメント数2</p>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon1.svg">
+            <p>みーちゃん</p>
+            <p>18歳</p>
+          </div>
+        </div>
+        <section><a href=""> 
+            <h3>彼氏の子を授かりました。</h3></a>
+          <p>回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。</p>
+        </section>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <p class="dateWrap_com">コメント数2</p>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon2.svg">
+            <p>かなこ</p>
+            <p>18歳</p>
+          </div>
+        </div>
+        <section><a href=""> 
+            <h3>彼氏の子を授かりました。</h3></a>
+          <p>回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。</p>
+          <div class="solved"> <img src="img/solved.svg" alt=""></div>
+        </section>
+      </div>
+      <p class="seeMore">もっとみる</p>
+      <div class="postTag">
+        <p>「未成年」のタグがついた投稿</p>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <p class="dateWrap_com">コメント数2</p>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon1.svg">
+            <p>みーちゃん</p>
+            <p>18歳</p>
+          </div>
+        </div>
+        <section><a href=""> 
+            <h3>彼氏の子を授かりました。</h3></a>
+          <p>回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。</p>
+          <div class="solved"> <img src="img/solved.svg" alt=""></div>
+        </section>
+      </div>
+      <div class="postWrap">
+        <div class="dateWrap">  
+          <p class="dateWrap_bday">2022.7.17 </p>
+          <p class="dateWrap_tag">妊娠</p>
+          <p class="dateWrap_tag">未成年</p>
+          <p class="dateWrap_com">コメント数2</p>
+        </div>
+        <div class="profFlex"> 
+          <div class="profWrap"><img src="img/icon2.svg">
+            <p>かなこ</p>
+            <p>18歳</p>
+          </div>
+        </div>
+        <section><a href=""> 
+            <h3>彼氏の子を授かりました。</h3></a>
+          <p>回答 : 拝見させていただきました。これから私が述べることは個人的な意見にはなりますが、参考にしていただけますと幸いです。</p>
+          <div class="solved"> <img src="img/solved.svg" alt=""></div>
+        </section>
+      </div>
+      <p class="seeMore">もっとみる</p>
+      <div class="bannerWrap"> 
+        <div class="postBtn"> <a href="">悩みを相談する</a></div>
+        <div class="banner1"> <a href="#"><img src="img/column_banner.svg" alt=""></a></div>
+        <div class="banner2"><a href="#"><img src="img/app_banner.svg" alt=""></a></div>
+        <div class="banner3">
+          <h4>タグから探す
+            <div class="postTag_flex">  
+              <ul> 
+                <li>妊娠</li>
+                <li>母子家庭</li>
+                <li>出産</li>
+                <li>堕胎</li>
+                <li>妊娠</li>
+                <li>母子家庭</li>
+                <li>出産</li>
+                <li>堕胎</li>
+                <li>妊娠</li>
+                <li>母子家庭</li>
+                <li>つわり</li>
+                <li>ピル</li>
+                <li>生理</li>
+                <li>生理</li>
+                <li>つわり</li>
+                <li>ピル</li>
+                <li>つわり</li>
+                <li>妊娠</li>
+                <li>つわり</li>
+                <li>ピル</li>
+              </ul>
+            </div>
+          </h4>
+          <div class="postDoctor"><img src="img/post_doctor.png" alt="">
+            <h4>医師に個別で相談する<span class="tri_right"><img src="img/doctor_dropright.png" alt=""></span></h4>
+            <p>
+               掲示板がハードルが高い方は<br>医師と個別でお話できます。</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_flex">
+        <ul>
+          <li> <a href="board.html">掲示板を見る</a></li>
+          <li> <a href="">診断する</a></li>
+          <li> <a href="">アプリについて</a></li>
+          <li> <a href="">婦人科の状況を見る</a></li>
+          <li> <a href="">お問合わせ</a></li>
+        </ul>
+      </div>
+      <p>&copy;Rupinasu All Rights Reserved. </p>
+    </footer><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </body>
 </html>

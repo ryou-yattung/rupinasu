@@ -13,14 +13,30 @@
                     //  "SELECT * FROM users WHERE email='$email' OR email='$email' LIMIT 1";<<test
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
+        
         if ($rows == 1) {
             $_SESSION['email'] = $email;
             // echo'login successfully';
-            header("location: mypage.html");
+            header("location: mypage.php");
+
+            // css
+            function style_change() {?>
+              <style type="text/css">
+                .login_btn{
+                      display: block;
+                  }
+                  .login_logo{
+                    display: none;
+                  }
+              </style>
+              <?php }
+              add_action( 'wp_head', 'style_change');
+
+            exit();
             // Redirect to user dashboard page
           //   header("Location: dashboard.php");
         } else {
-            echo "Incorrect";
+            echo "login fail";
         }
     } 
 ?>
@@ -92,6 +108,5 @@
         </div>
       </div>
     </div>
-
 </body>
 </html>

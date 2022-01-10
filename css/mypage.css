@@ -384,6 +384,48 @@ body {
   font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
 }
 
+.dateWrap {
+  display: flex;
+  font-size: 1.6rem;
+  color: #59414c;
+  margin-bottom: 5px;
+}
+
+.dateWrap_bday {
+  padding-right: 40px;
+}
+
+.dateWrap_tag {
+  opacity: 0.6;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_tag::before {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/tag.svg) no-repeat;
+  margin-left: 10px;
+}
+
+.dateWrap_com {
+  padding-left: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap_com::after {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url(../img/ball.svg) no-repeat;
+  margin-left: 10px;
+}
+
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #59414C;
@@ -452,12 +494,6 @@ h1 img {
 .flex li a {
   color: #59414C;
   text-decoration: none;
-  /* font-size: 1.5rem; */
-  /* height: 100%;
-     width: 100%;
-     display: block;
-     background: #FF8EB1;
-     border-radius: 50px; */
 }
 
 .li_h {
@@ -480,12 +516,28 @@ h1 img {
   color: white;
 }
 
+.login_logo {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.login_logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.login_logo p {
+  padding-left: 15px;
+}
+
 footer {
   width: 100%;
   height: 1000px;
   background: url(../img/font.png) center bottom no-repeat;
   background-size: contain;
   position: relative;
+  bottom: 0;
 }
 
 .footer_flex {
@@ -698,7 +750,8 @@ h3 {
 }
 
 .profileWrap .mailBtn {
-  width: 14em;
+  width: 140px;
+  height: 33px;
   border-radius: 7px;
   padding: 8px;
   margin: 0 auto;

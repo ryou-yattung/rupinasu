@@ -1,3 +1,67 @@
+<?php
+    require('sqlConnect.php');
+    session_start();
+
+    if(isset($_REQUEST['id'])){
+      var_dump($_REQUEST['id']);
+      $id = stripslashes($_REQUEST['id']);
+      $id = mysqli_real_escape_string($con, $id);
+
+
+
+      $img = stripslashes($_REQUEST['img']);
+      $img = mysqli_real_escape_string($con, $img);
+
+      $username = stripslashes($_REQUEST['username']);
+      $username = mysqli_real_escape_string($con, $username);
+
+      $age = stripslashes($_REQUEST['age']);
+      $age = mysqli_real_escape_string($con, $age);
+
+      $gender = stripslashes($_REQUEST['gender']);
+      $gender = mysqli_real_escape_string($con, $gender);
+
+      $intro = stripslashes($_REQUEST['intro']);
+      $intro = mysqli_real_escape_string($con, $intro);
+
+      $query = "
+        UPDATE 
+          users
+        SET 
+          username = '{$username}',
+          img = '{$img}',
+          age = '{$age}',
+          gender = '{$gender}',
+          intro = '{$intro}'
+        WHERE
+          id = {$id}
+      ";
+                    
+      $result = mysqli_query($con, $query);
+
+      if($result){
+          // echo "successfully";
+          header("location: mypage.php");
+          exit;
+      }else{
+          echo "fields";
+          // print $query;
+          exit;
+      }
+    }
+    else{
+      $email = $_SESSION['email'];
+      $email    = stripslashes($email);
+      $email    = mysqli_real_escape_string($con, $email);
+      $query = "SELECT * FROM users WHERE email = '{$email}'";
+      $result = mysqli_query($con, $query);
+      $user = [];
+      while($row=mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        $user = $row;
+      }
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -45,17 +109,20 @@
     <main> 
       <h2>マイページ</h2>
       <div class="profileBg">
-        <form action="mypage_edit.pug" method="post"> 
+        <form action="mypage_edit.php" method="post">
+          <input type="hidden" name="id" value="<?= $user['id']?>">
+
           <div class="iconWrap"> 
-            <label> <img class="icon_img" src="" alt="">
-              <input class="img_font" type="file" name="file">
+            <label for="img"> 
+              <img id="preview" src="" alt="">
+              <input id="img" type="file" name="img">
             </label>
-            <p>プロフィール写真を変更         </p>
+            <p>プロフィール写真を変更</p>
           </div>
           <div class="profileWrap"> 
             <div class="name form_left">   
-              <label for="name">名前</label>
-              <input type="text" placeholder="みーちゃん" name="name" id="name">
+              <label for="username">名前</label>
+              <input type="text" name="username" placeholder="例：みーちゃん" required />
             </div>
             <div class="age form_left"> 
               <label for="age">年齢</label>
@@ -64,16 +131,16 @@
             <div class="gender form_left"> 
               <label>性別</label>
               <div class="gender_input">
-                <input type="radio" name="drone" id="male">
-                <label for="male">男性</label>
+                <input type="radio" name="gender" id="gender" value="男性">
+                <label for="gender">男性</label>
               </div>
               <div class="gender_input">
-                <input type="radio" name="drone" id="female">
-                <label for="female">女性</label>
+                <input type="radio" name="gender" id="gender" value="女性">
+                <label for="gender">女性</label>
               </div>
             </div>
             <div class="introWrap">
-              <label class="form_left" for="sampleName">自己紹介</label><textarea name="sampleName" id ="sampleName" placeholder="初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。"></textarea>
+              <label class="form_left" for="intro">自己紹介   </label><textarea name="intro" id ="intro" placeholder="初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。"></textarea>
             </div>
             <div class="btnWrap"> 
               <div class="cancel btn">
