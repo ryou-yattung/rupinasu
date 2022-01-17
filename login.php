@@ -15,22 +15,17 @@
         $rows = mysqli_num_rows($result);
         
         if ($rows == 1) {
+            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $_SESSION['email'] = $email;
+            $_SESSION['id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['age'] = $row['age'];
+            $_SESSION['gender'] = $row['gender'];
+            $_SESSION['intro'] = $row['intro'];
+
+
             // echo'login successfully';
             header("location: mypage.php");
-
-            // css
-            function style_change() {?>
-              <style type="text/css">
-                .login_btn{
-                      display: block;
-                  }
-                  .login_logo{
-                    display: none;
-                  }
-              </style>
-              <?php }
-              add_action( 'wp_head', 'style_change');
 
             exit();
             // Redirect to user dashboard page

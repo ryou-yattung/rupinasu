@@ -376,12 +376,14 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .dateWrap {
@@ -427,8 +429,8 @@ body {
 }
 
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: #59414C;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: #59414c;
 }
 
 header {
@@ -492,7 +494,7 @@ h1 img {
 }
 
 .flex li a {
-  color: #59414C;
+  color: #59414c;
   text-decoration: none;
 }
 
@@ -503,13 +505,14 @@ h1 img {
 .btn_login {
   height: 40px;
   width: 130px;
+  display: none;
 }
 
 #btn_login_a {
   height: 100%;
   width: 100%;
   display: block;
-  background: #FF8EB1;
+  background: #ff8eb1;
   border-radius: 50px;
   padding: 10px;
   box-shadow: #e6e6e6 0px -3px 0px inset;
@@ -519,7 +522,7 @@ h1 img {
 .login_logo {
   display: flex;
   align-items: center;
-  display: none;
+  /* display: none; */
 }
 
 .login_logo img {
@@ -739,9 +742,9 @@ h2 {
 }
 
 .profileWrap .btnWrap .cancel {
-  background: #CECECE;
+  background: #cecece;
 }
 
 .profileWrap .btnWrap .submit {
-  background: #FF8EB1;
+  background: #ff8eb1;
 }

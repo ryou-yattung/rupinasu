@@ -9,8 +9,8 @@
 
 
 
-      $img = stripslashes($_REQUEST['img']);
-      $img = mysqli_real_escape_string($con, $img);
+      // $img = stripslashes($_REQUEST['img']);
+      // $img = mysqli_real_escape_string($con, $img);
 
       $username = stripslashes($_REQUEST['username']);
       $username = mysqli_real_escape_string($con, $username);
@@ -29,7 +29,7 @@
           users
         SET 
           username = '{$username}',
-          img = '{$img}',
+
           age = '{$age}',
           gender = '{$gender}',
           intro = '{$intro}'
@@ -40,6 +40,15 @@
       $result = mysqli_query($con, $query);
 
       if($result){
+        $query = "SELECT * FROM users WHERE id = {$id}";
+        $result = mysqli_query($con, $query);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['age'] = $row['age'];
+        $_SESSION['gender'] = $row['gender'];
+        $_SESSION['intro'] = $row['intro'];
+        // $_SESSION['img'] = $row['img'];
+
           // echo "successfully";
           header("location: mypage.php");
           exit;
@@ -99,9 +108,9 @@
           <li class="li_h"><a href="board.html">掲示板を見る</a></li>
           <li class="li_h"><a href="#">診断をする</a></li>
           <li><a href="">るぴなすの<br>アプリについて</a></li>
-          <li class="login_btn"><a id="btn_login_a" href="login.php">ログインする</a></li>
+          <li class="btn_login"><a id="btn_login_a" href="login.php">ログインする</a></li>
           <li class="login_logo"><img src="img/icon2.svg" alt="icon">
-            <p>みーちゃん </p>
+            <p><?php echo ($_SESSION["username"]) ?></p>
           </li>
         </ul>
       </nav>

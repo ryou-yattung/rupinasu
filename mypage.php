@@ -2,10 +2,6 @@
      require('sqlConnect.php');
 
      session_start();
-
-    if($_SESSION['email']){
-      $age = $_SESSION['age'];
-    }
 ?>
 
 <!DOCTYPE html>
@@ -43,12 +39,15 @@
           <li class="li_h"><a href="board.html">掲示板を見る</a></li>
           <li class="li_h"><a href="#">診断をする</a></li>
           <li><a href="">るぴなすの<br>アプリについて</a></li>
-          <li><a id="btn_login_a" href="login.php">ログインする</a></li>
+          <li class="btn_login"><a id="btn_login_a" href="login.php">ログインする</a></li>
+          <li class="login_logo"><img src="img/icon2.svg">
+              <p><?php echo ($_SESSION["username"]) ?></p>
+            </li>
         </ul>
       </nav>
     </header>
     <main>
-    <input type="hidden" name="id" value="<?= $user['id']?>">
+    <input type="hidden" name="id" value="<?= $user['username']?>">
       <h2>マイページ</h2>
       <div class="serach"> 
         <input type="text" placeholder="自分と似た悩みを検索する"><span></span>
@@ -59,16 +58,16 @@
             <h3>プロフィール</h3>
             <div class="profileFlex">
               <div class="profileInfo">
-                <p class="name"><?php echo $_SESSION['age']; ?></p>
-                <p class="age info">18<span>女性</span></p>
+                <p class="name"><?php echo ($_SESSION["username"]) ?></p>
+                <p class="age info"><?php echo ($_SESSION["age"]) ?><span><?php echo ($_SESSION["gender"]) ?></span></p>
                 <p class="regiNum info">登録数<span>28</span></p>
                 <p class="postNum info">投稿数<span>48</span></p>
               </div>
-              <div class="profileIconWrap"><img src="img/profileIcon.svg" alt=""></div>
+              <div class="profileIconWrap"><img src="img/icon2.svg" alt=""></div>
             </div>
             <section> 
               <h4>自己紹介</h4>
-              <p>初めまして！彼氏が禿げてます。登録したばかりで分からないことが沢山ありますがよろしくお願いします。</p>
+              <p><?php echo ($_SESSION["intro"]) ?></p>
             </section>
             <div class="mailBtn"> <a href="mypage_edit.php">プロフィール編集</a></div>
           </div>
